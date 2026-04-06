@@ -154,8 +154,8 @@ if (gr.next()) {
 ### Option 1: Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/snow-claude.git
-cd snow-claude
+git clone https://github.com/Hawks6/SNow-Claude.git
+cd SNow-Claude
 ```
 
 ### Option 2: Download as ZIP
