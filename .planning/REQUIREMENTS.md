@@ -28,7 +28,17 @@
 - Processing multiple stories or epics in a single execution.
 
 ## Traceability
-*Traceability matrix between requirements and roadmap phases will be populated in the next step.*
+
+| REQ-ID | Phase | Status |
+|--------|-------|--------|
+| CORE-01 | 1 | Planned |
+| CORE-02 | 2 | Planned |
+| CORE-03 | 2 | Planned |
+| CORE-04 | 2 | Planned |
+| CORE-05 | 2 | Planned |
+| GEN-01 | 2 | Planned |
+| GEN-02 | 2 | Planned |
+| GEN-03 | 1 | Planned |
 
 ---
 *Generated: 2026-04-09*
