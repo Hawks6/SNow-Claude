@@ -337,6 +337,7 @@ You can activate specialized behavior modes:
 | `/developer` | Developer | Spec-to-code, production-ready output |
 | `/reviewer` | Reviewer | Code review, anti-pattern detection |
 | `/debugger` | Debugger | Root cause analysis, diagnostic steps |
+| `/story` | Story Analyzer | User story breakdown, artifact identification |
 
 When a role is activated via its command or by loading a role prompt from `prompts/`, adopt that role's perspective fully. You can switch roles mid-conversation.
 
