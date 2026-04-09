@@ -248,6 +248,10 @@ Claude Projects let you attach files as persistent knowledge. Every conversation
    - `knowledge/anti-patterns.md`
    - `knowledge/naming-conventions.md`
 
+   **Optional (Based on your workflow):**
+   - `prompts/story-analyzer.md` (If you frequently map agile stories to technical designs)
+   - `specs/user-story.spec.md` (If you want Claude to know the exact format required for stories)
+
 4. **Start a new conversation** inside the project
 5. Ask Claude to build something — it already has full ServiceNow expertise loaded
 
@@ -294,6 +298,7 @@ Paste a role prompt from `prompts/` to change Claude's behavior:
 | File to Paste | What Changes |
 |---------------|-------------|
 | `prompts/architect.md` | Claude evaluates design options before coding |
+| `prompts/story-analyzer.md` | Claude acts as an architect to map user stories to technical designs |
 | `prompts/developer.md` | Claude generates code from specs with full output format |
 | `prompts/reviewer.md` | Claude reviews your existing code for issues |
 | `prompts/debugger.md` | Claude systematically diagnoses your ServiceNow problems |
@@ -391,6 +396,7 @@ Fill-in-the-blank YAML templates. Complete one → paste it with SYSTEM.md + con
 | [`business-rule.spec.md`](specs/business-rule.spec.md) | Business Rule with full configuration |
 | [`script-include.spec.md`](specs/script-include.spec.md) | Script Include class with methods |
 | [`client-script.spec.md`](specs/client-script.spec.md) | Client Script with GlideAjax calls |
+| [`user-story.spec.md`](specs/user-story.spec.md) | Agile user story definition for the `/story` skill |
 | [`rest-endpoint.spec.md`](specs/rest-endpoint.spec.md) | Scripted REST API with resources |
 | [`widget.spec.md`](specs/widget.spec.md) | Service Portal widget (server + client + HTML) |
 | [`flow.spec.md`](specs/flow.spec.md) | Flow Designer flow with steps |
