@@ -405,9 +405,11 @@ Paste one of these to change Claude's mode of operation.
 | Role | File | Behavior |
 |------|------|----------|
 | 🏗️ Architect | [`architect.md`](prompts/architect.md) | Evaluates design alternatives, produces ADRs, plans app structure |
+| 📖 Story Analyzer | [`story-analyzer.md`](prompts/story-analyzer.md) | Parses agile user stories into technical solution maps |
 | 💻 Developer | [`developer.md`](prompts/developer.md) | Spec-to-code pipeline, complete output with config + tests |
 | 🔍 Reviewer | [`reviewer.md`](prompts/reviewer.md) | Systematic code review with severity ratings (🔴🟠🟡🟢) |
 | 🐛 Debugger | [`debugger.md`](prompts/debugger.md) | Root cause analysis, platform diagnostic tools, resolution steps |
+
 
 ### Knowledge Base — `knowledge/`
 
@@ -478,6 +480,18 @@ Flow name: ITSM - Change State Implement Approval Flow"
 Should we use a Business Rule with Script Include, Flow Designer, 
 or a combination? We're on the Washington DC release with IntegrationHub."
 ```
+
+### Example 5: User Story Analysis (The `/story` skill)
+
+```
+📋 SYSTEM.md + prompts/story-analyzer.md
+
+"As an ITIL Manager, I want to automatically close stale incident tasks 
+after 30 days of inactivity, so that my metrics are accurate."
+```
+
+Claude will output a **Technical Solution Map** detailing the exact ServiceNow artifacts needed (e.g., Scheduled Job, Business Rule), required context files, and acceptance criteria. It will then hand off execution to the `/developer` role to generate the final code.
+
 
 ---
 
