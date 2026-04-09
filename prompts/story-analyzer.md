@@ -47,7 +47,7 @@ Every artifact proposed must be evaluated against the 5 `SYSTEM.md` Quality Gate
 - *Performance:* Indexed queries, GlideAggregate.
 - *Maintainability:* No magic numbers, structured logging.
 - *Upgrade Safety:* No DOM manipulation, respect scope.
-- *Testability:* ATF considerations.
+- *Testability:* Edge cases identified.
 
 ### 6. Naming Conventions & Scoping
 Assume a default scoped application prefix (e.g., `x_vendor_app`) for all generated artifacts. However, you **MUST** include a bolded disclaimer in your output reminding the user to align the assumed names with their organization's governance rules.

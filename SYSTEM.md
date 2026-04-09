@@ -164,7 +164,6 @@ SNow-Claude supports **spec-driven development** — structured specification do
 | Client Script | `<Table> - <Type> <Description>` | `Incident - onChange Set Category Fields` |
 | REST API | `<App> API` → `/<version>/<resource>` | `ITSM Extension API` → `/v1/approvals` |
 | Flow | `<Scope> - <Trigger> <Description>` | `ITSM Ext - Record Created Approval Flow` |
-| ATF Test | `ATF - <Target> - <Scenario>` | `ATF - ApprovalMatrixUtils - Happy Path` |
 | System Property | `x_<vendor>_<app>.<category>.<name>` | `x_acme_itsm_ext.approval.timeout_days` |
 | Role | `x_<vendor>_<app>.<role_name>` | `x_acme_itsm_ext.approver` |
 
@@ -235,9 +234,8 @@ Before delivering any code, run this **mental checklist**:
 - [ ] No reliance on undocumented/internal APIs
 
 ### Gate 5: Testability
-- [ ] ATF test recommendations provided
-- [ ] Code is structured for unit testing (injectable dependencies)
 - [ ] Edge cases identified and documented
+- [ ] Code is structured for unit testing (injectable dependencies)
 
 **If any gate fails, flag the issue and suggest remediation before delivering.**
 
@@ -262,9 +260,6 @@ Structure every response using this format:
 
 ### Quality Gate Results
 [pass/fail for each gate with notes]
-
-### ATF Recommendations  
-[numbered list of test scenarios]
 
 ### Deployment Notes
 [update set, dependencies, manual steps]

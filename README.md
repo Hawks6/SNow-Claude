@@ -72,7 +72,7 @@ SNow-Claude is a collection of **composable markdown files** — no dependencies
 | Hardcoded sys_ids | `gs.getProperty()` + system properties |
 | Missing error handling | try/catch + structured logging with source IDs |
 | No input validation | `gs.nil()` checks, type validation, GlideRecordSecure |
-| No test suggestions | ATF test recommendations for every artifact |
+| No naming conventions | `<Table> - <Action> <Description>` everywhere |
 | Silent about bad practices | 25-point quality gate with pass/fail report |
 
 ### Before & After
@@ -280,7 +280,7 @@ requirements when state changes to Resolved:
 - P1 incidents must have a linked problem"
 ```
 
-Claude will generate the complete Business Rule with naming conventions, quality gate results, ATF test recommendations, and deployment notes.
+Claude will generate the complete Business Rule with naming conventions, quality gate results, and deployment notes.
 
 ### Step 3: Level Up with Specs (Optional)
 

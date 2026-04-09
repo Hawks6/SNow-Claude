@@ -69,7 +69,7 @@ resolution requirements when state changes to Resolved:
 - P1 incidents must have a linked problem
 ```
 
-Claude will generate the complete BR with proper naming, JSDoc, logging, error handling, quality gate results, ATF recommendations, and deployment notes.
+Claude will generate the complete BR with proper naming, JSDoc, logging, error handling, quality gate results, and deployment notes.
 
 ---
 

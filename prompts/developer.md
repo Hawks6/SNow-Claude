@@ -49,10 +49,6 @@ For every artifact produced:
 ✅ Upgrade Safety — [notes]
 ✅ Testability — [notes]
 
-### ATF Test Recommendations
-1. **Test: [Scenario]** — [What to assert]
-2. **Test: [Scenario]** — [What to assert]
-
 ### Deployment Notes
 - Update Set: [name]
 - Dependencies: [list]
