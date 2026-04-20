@@ -15,7 +15,7 @@
   <p align="center">
     <img src="https://img.shields.io/badge/ServiceNow-Washington_DC_%2F_Xanadu-4DB33D?style=flat-square" alt="ServiceNow Version">
     <img src="https://img.shields.io/badge/Claude-Compatible-7C3AED?style=flat-square" alt="Claude Compatible">
-    <img src="https://img.shields.io/badge/Files-34-blue?style=flat-square" alt="Files">
+    <img src="https://img.shields.io/badge/Files-36-blue?style=flat-square" alt="Files">
     <img src="https://img.shields.io/badge/Dependencies-Zero-brightgreen?style=flat-square" alt="No Dependencies">
     <img src="https://img.shields.io/badge/License-MIT-yellow?style=flat-square" alt="License">
   </p>
@@ -182,6 +182,7 @@ snow-claude/
 │   ├── client-scripts.md        ←    Client Scripts & UI Policies
 │   ├── gliderecord.md           ←    GlideRecord / GlideAggregate
 │   ├── flow-designer.md         ←    Flow Designer & IntegrationHub
+│   ├── playbooks.md             ←    Process Automation Designer & Playbooks ✨NEW
 │   ├── service-portal.md        ←    Service Portal widgets
 │   ├── now-experience.md        ←    UI Builder / Now Experience
 │   ├── rest-api.md              ←    Scripted REST APIs
@@ -198,6 +199,7 @@ snow-claude/
 │   ├── rest-endpoint.spec.md
 │   ├── widget.spec.md
 │   ├── flow.spec.md
+│   ├── playbook.spec.md         ←    PAD Playbook / Process Automation Designer ✨NEW
 │   ├── integration.spec.md
 │   └── scoped-app.spec.md
 │
@@ -379,6 +381,7 @@ Composable knowledge modules. Load per task.
 | [`client-scripts.md`](contexts/client-scripts.md) | ~150 | Client Scripts, UI Policies, catalog scripts |
 | [`gliderecord.md`](contexts/gliderecord.md) | ~180 | GlideRecord, GlideAggregate, GlideRecordSecure |
 | [`flow-designer.md`](contexts/flow-designer.md) | ~100 | Flows, Subflows, Actions, IntegrationHub |
+| [`playbooks.md`](contexts/playbooks.md) | ~300 | **PAD & Playbooks** — process design, lane/activity patterns, workspace embedding, S2P patterns |
 | [`service-portal.md`](contexts/service-portal.md) | ~120 | Service Portal widgets (AngularJS) |
 | [`now-experience.md`](contexts/now-experience.md) | ~100 | UI Builder / Now Experience components |
 | [`rest-api.md`](contexts/rest-api.md) | ~130 | Scripted REST APIs, outbound integrations |
@@ -400,6 +403,7 @@ Fill-in-the-blank YAML templates. Complete one → paste it with SYSTEM.md + con
 | [`rest-endpoint.spec.md`](specs/rest-endpoint.spec.md) | Scripted REST API with resources |
 | [`widget.spec.md`](specs/widget.spec.md) | Service Portal widget (server + client + HTML) |
 | [`flow.spec.md`](specs/flow.spec.md) | Flow Designer flow with steps |
+| [`playbook.spec.md`](specs/playbook.spec.md) | **PAD Playbook** — lanes, activities, workspace integration, S2P example |
 | [`integration.spec.md`](specs/integration.spec.md) | External system integration |
 | [`scoped-app.spec.md`](specs/scoped-app.spec.md) | Full scoped application architecture |
 | [`_spec-guide.md`](specs/_spec-guide.md) | How spec-driven development works |
@@ -411,7 +415,8 @@ Paste one of these to change Claude's mode of operation.
 | Role | File | Behavior |
 |------|------|----------|
 | 🏗️ Architect | [`architect.md`](prompts/architect.md) | Evaluates design alternatives, produces ADRs, plans app structure |
-| 📖 Story Analyzer | [`story-analyzer.md`](prompts/story-analyzer.md) | Parses agile user stories into technical solution maps |
+| 📖 Story Analyzer | [`story-analyzer.md`](prompts/story-analyzer.md) | Parses agile user stories into tech specs; **auto-detects cross-team handoffs and recommends PAD Playbooks** |
+| 🎭 Playbook Designer | Load `contexts/playbooks.md` + `specs/playbook.spec.md` | PAD process design, lane breakdown, workspace integration guide |
 | 💻 Developer | [`developer.md`](prompts/developer.md) | Spec-to-code pipeline, complete output with config + tests |
 | 🔍 Reviewer | [`reviewer.md`](prompts/reviewer.md) | Systematic code review with severity ratings (🔴🟠🟡🟢) |
 | 🐛 Debugger | [`debugger.md`](prompts/debugger.md) | Root cause analysis, platform diagnostic tools, resolution steps |
