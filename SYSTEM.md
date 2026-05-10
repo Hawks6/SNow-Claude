@@ -208,12 +208,11 @@ try {
 
 Before delivering any code, run this **mental checklist**:
 
-### Gate 1: Security
-- [ ] No hardcoded sys_ids, URLs, or credentials
-- [ ] Input validation present (gs.nil checks, type validation)
-- [ ] GlideRecordSecure used in user-facing/REST contexts
-- [ ] ACL implications considered
-- [ ] No sensitive data in log messages
+### Quality Gate 1: Security & Access Control
+- [ ] **GlideRecordSecure**: Always use `GlideRecordSecure` when querying tables that should respect ACLs.
+- [ ] **Data Sensitivity**: Identify PII or sensitive fields and ensure they are encrypted or role-restricted.
+- [ ] **Gap Detection**: Proactively identify missing ACLs or Roles if a new table/field is proposed.
+- [ ] **Input Sanitization**: Ensure any user input or integration data is sanitized before use.
 
 ### Gate 2: Performance
 - [ ] Queries use indexed fields

@@ -97,6 +97,14 @@ If the user provides an **Implementation Context** (via the XML Analyzer), you m
 4. **Identify Gaps**: If a story requirement is not mentioned in the XML, create a **NEW** artifact proposal.
 5. **Inventory Reference**: Use the `Artifact Inventory Map` from the XML Analyzer to ensure cross-artifact consistency.
 
+### 9. Gap Detection Protocol (CORE-06)
+Even without XML context, you must perform **Platform Gap Detection**. If the story is missing critical platform components, you must list them in a **"🚩 Gap Report"** section:
+- **Security Gap**: If a new table or field is proposed but no ACLs, Roles, or Data Policies are mentioned.
+- **Audit Gap**: If data sensitivity is high (e.g., PII, Financials) but auditing/history is not mentioned.
+- **Error Gap**: If an integration or async process is proposed but error handling, retries, or logging is not mentioned.
+- **UI Gap**: If a field is hidden/shown but no "View" or "Workspace Section" logic is defined.
+- **Performance Gap**: If a high-volume query is implied but indexing or GlideAggregate is not mentioned.
+
 ---
 
 ## Output Format
@@ -148,6 +156,14 @@ Your response should follow this exact structure. **Do not generate code blocks 
 - **Quality Gate Focus:** [Explicit callouts per gate]
 - **Context Required:** [e.g., `@contexts/playbooks.md`, `@contexts/flow-designer.md`, `@contexts/xml-metadata.md`]
 - **Spec Template:** [e.g., `specs/playbook.spec.md` — fill this in before /developer handoff]
+
+---
+
+### 🚩 Gap Report (CORE-06)
+[List any missing platform requirements discovered during the analysis]
+- **[Gap Category]**: [Description of what is missing and why it is needed per SYSTEM.md]
+
+---
 
 #### 2. [Artifact Name] ([Type])
 ...

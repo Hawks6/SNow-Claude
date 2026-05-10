@@ -64,7 +64,7 @@
 ## Milestone 2: v2 - Advanced Orchestration
 **Goal:** Handle complex, multi-artifact processes and automated testing.
 
-### Phase 4: Multi-Artifact Orchestration
+### Phase 5: Multi-Artifact Orchestration
 **Goal:** Implement logic to manage dependencies between generated artifacts.
 
 - [ ] Implement CORE-07 (Multi-artifact orchestration).
