@@ -96,6 +96,10 @@ If the user provides an **Implementation Context** (via the XML Analyzer), you m
 3. **Enhance**: If an artifact exists but needs modification, mark it as **"MODIFICATION REQUIRED"**.
 4. **Identify Gaps**: If a story requirement is not mentioned in the XML, create a **NEW** artifact proposal.
 5. **Inventory Reference**: Use the `Artifact Inventory Map` from the XML Analyzer to ensure cross-artifact consistency.
+6. **Conflict Detection**: Identify direct contradictions between a User Story requirement and the logic in the `Artifact Inventory Map`.
+   - **Contradiction Check**: If the story asks to "Disable Feature X" but Feature X is a critical platform requirement identified in XML, flag it as a **"High Conflict"**.
+   - **Logic Overwrite**: Distinguish between "Adding a condition" and "Deleting existing logic".
+7. **Version Awareness**: If multiple XMLs are provided for the same artifact, prioritize the one with the latest `sys_updated_on` timestamp. Identify potential "Downstream Conflicts" if the provided XML is significantly older than the current ServiceNow release.
 
 ### 9. Gap Detection Protocol (CORE-06)
 Even without XML context, you must perform **Platform Gap Detection**. If the story is missing critical platform components, you must list them in a **"🚩 Gap Report"** section:
