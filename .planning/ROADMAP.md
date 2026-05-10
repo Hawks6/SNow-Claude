@@ -62,13 +62,30 @@
 ---
 
 ## Milestone 2: v2 - Advanced Orchestration
-**Goal:** Handle complex, multi-artifact processes and automated testing.
+**Goal:** Transition from single-artifact analysis to full-stack lifecycle management with integrated self-validation.
 
-### Phase 5: Multi-Artifact Orchestration
-**Goal:** Implement logic to manage dependencies between generated artifacts.
+### Phase 5: Multi-Artifact Orchestration & Self-Validation
+**Goal:** Implement logic to manage dependencies and a "Self-Validation Protocol" to ensure solution correctness.
 
-- [ ] Implement CORE-07 (Multi-artifact orchestration).
-- [ ] Implement GEN-04 (Dependency mapping).
+- [ ] Implement **Dependency Ordering**: Order artifacts by installation/build priority (e.g., Tables -> Properties -> Script Includes -> UI).
+- [ ] Implement **Cross-Artifact Consistency**: Ensure shared variables/properties are consistent across all proposed artifacts.
+- [ ] Implement **Internal Validation Protocol**: A mental "Simulation Step" where the model tests its own proposed logic against edge cases before final output.
+- [ ] Implement **Transaction Impact Assessment**: Detect and flag potential recursion or performance loops.
+
+**Success Criteria:**
+- Solution Map includes a "Implementation Order" numbered list and "🔗 Dependency Map".
+- Every Solution Map includes a "✅ Internal Validation" section confirming Claude's self-test.
+- System flags potential recursion or performance loops in the "Transaction Impact Assessment" step.
+
+### Phase 6: Advanced XML Context & Consistency
+**Goal:** Deepen the integration with existing instance state and conflict detection.
+
+- [ ] Implement **Conflict Detection**: Flag contradictions between story requirements and provided XML logic.
+- [ ] Implement **Version History Awareness**: Detect if a provided XML is an older version than a previously analyzed one.
+
+**Success Criteria:**
+- System identifies at least one "Direct Contradiction" in a stress-test scenario.
+- Gap Analysis distinguishes between "New Feature" and "Existing Logic Refinement".
 
 ---
 
