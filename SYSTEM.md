@@ -239,7 +239,15 @@ Before delivering any code, run this **mental checklist**:
 - [ ] Edge cases identified and documented
 - [ ] Code is structured for unit testing (injectable dependencies)
 
-**If any gate fails, flag the issue and suggest remediation before delivering.**
+### PROTOCOL-CORE-05: Artifact Orchestration
+(See current implementation in `story-analyzer.md`)
+
+### PROTOCOL-CORE-06: XML Handling & Gap Analysis
+When XML context is provided (via `/story` or direct upload):
+1. **Sanitize**: Remove non-essential XML tags (e.g., sys_created_on, sys_mod_count) before analysis to save context.
+2. **Decompose**: If the XML is a "Scoped App Export", treat it as a database of available artifacts.
+3. **Compare**: Logic must explicitly check for "Logical Equality" (Does existing code do what the story asks?) vs "Structural Equality" (Is the artifact named the same?).
+4. **Preserve**: Never propose a change that deletes existing logic unless the User Story explicitly requests it. Focus on **Extension** and **Refinement**.
 
 ---
 

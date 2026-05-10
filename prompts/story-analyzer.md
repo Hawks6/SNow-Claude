@@ -89,6 +89,14 @@ For PAD Playbooks specifically, validate:
 - Backing Subflows: `<Scope> - PAD <Noun> <Verb> Subflow`
 - Activity Definitions: `<Verb><Noun>` (PascalCase)
 
+### 8. Gap Analysis & XML Context
+If the user provides an **Implementation Context** (via the XML Analyzer), you must:
+1. **Compare**: Map the User Story requirements against the provided XML logic.
+2. **Deduplicate**: If an artifact already exists and meets the requirement, mark it as **"COVERED"**.
+3. **Enhance**: If an artifact exists but needs modification, mark it as **"MODIFICATION REQUIRED"**.
+4. **Identify Gaps**: If a story requirement is not mentioned in the XML, create a **NEW** artifact proposal.
+5. **Inventory Reference**: Use the `Artifact Inventory Map` from the XML Analyzer to ensure cross-artifact consistency.
+
 ---
 
 ## Output Format
@@ -119,11 +127,18 @@ Your response should follow this exact structure. **Do not generate code blocks 
 
 > **⚠️ NAMING DISCLAIMER:** Default scoped prefixes (e.g., `x_vendor_app`) have been assumed. Please ensure you update these prefixes to match your organization's specific governance and application scope requirements before generating code!
 
+### 📋 Implementation Coverage (Gap Analysis)
+> [Only include this section if XML context was provided]
+- **Analyzed Source**: [e.g., App Scope XML, Update Set]
+- **Found Artifacts**: [List of existing artifacts identified]
+- **Coverage Status**: [e.g., 60% of story requirements covered by existing implementation]
+
 ### 📦 Proposed Artifacts
 
 > **🔄 Playbook Recommended?** [YES/NO — state finding from Cross-Team Handoff Detector here]
 
 #### 1. [Artifact Name] ([Type])
+- **Status**: [NEW | MODIFICATION REQUIRED | COVERED]
 - **Scope/Table:** `[Scoped App Name]` / `[Table Name]`
 - **Workspace:** [If Playbook: which workspace and record page]
 - **Logic:** [Brief bullet points explaining the required code logic]
@@ -131,7 +146,7 @@ Your response should follow this exact structure. **Do not generate code blocks 
   - For Flows: list trigger → steps → outputs
   - For Scripts: list method signatures → logic summary
 - **Quality Gate Focus:** [Explicit callouts per gate]
-- **Context Required:** [e.g., `@contexts/playbooks.md`, `@contexts/flow-designer.md`]
+- **Context Required:** [e.g., `@contexts/playbooks.md`, `@contexts/flow-designer.md`, `@contexts/xml-metadata.md`]
 - **Spec Template:** [e.g., `specs/playbook.spec.md` — fill this in before /developer handoff]
 
 #### 2. [Artifact Name] ([Type])

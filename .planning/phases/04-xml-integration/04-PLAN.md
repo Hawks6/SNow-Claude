@@ -11,14 +11,16 @@
 - [ ] **Task 4.2: Create `contexts/xml-metadata.md`**
   - Document the mapping for the LLM.
 
-## Wave 2: The XML Analyzer
-**Objective:** Create the specialized role for ingestion.
+## Wave 2: The XML Analyzer & Decomposition
+**Objective:** Create the specialized role for ingestion, including large file handling.
 
 - [ ] **Task 4.3: Implement `prompts/xml-analyzer.md`**
   - Define the persona: "ServiceNow XML Architect".
-  - Build the extraction logic: Convert XML to a "Developer-Friendly Summary".
-- [ ] **Task 4.4: Integration Test**
-  - Pass a sample XML to the analyzer and verify the summary quality.
+  - **Decomposition Logic**: Add protocols for breaking down "Entire App XML" into individual artifact chunks.
+  - Build the extraction logic: Convert XML chunks to a "Developer-Friendly Summary".
+- [ ] **Task 4.4: Sequential Ingestion Protocol**
+  - Define how the user should provide multiple chunks if the file is too large for one prompt.
+  - Verification of extraction logic with a large "App Scope" sample.
 
 ## Wave 3: Intelligent Gap Analysis
 **Objective:** Update the `/story` skill to use the XML context.
