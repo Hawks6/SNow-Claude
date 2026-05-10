@@ -46,6 +46,19 @@
 - System correctly identifies at least one "ambiguous" story and asks for clarification instead of generating a map.
 - Playbook detection is verified with a cross-team handoff scenario.
 
+### Phase 4: XML Context Integration
+**Goal:** Enable the `/story` skill to ingest and analyze ServiceNow XML exports for "As-Is" context.
+
+- [ ] Implement CORE-08 (XML Metadata Extraction).
+- [ ] Implement CORE-09 (As-Is vs. To-Be Gap Analysis).
+- [ ] Add `prompts/xml-analyzer.md` (or integrate into `story-analyzer.md`).
+- [ ] Update `SYSTEM.md` with XML handling protocols.
+
+**Success Criteria:**
+- System can parse a Business Rule XML and identify the script logic.
+- System correctly identifies if a story requirement is already satisfied by the provided XML.
+- Solution Map includes "Existing Artifacts" section when XML context is provided.
+
 ---
 
 ## Milestone 2: v2 - Advanced Orchestration
