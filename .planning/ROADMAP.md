@@ -89,8 +89,44 @@
 
 ---
 
+## Milestone 3: v3 - Interactive Refinement
+**Goal:** Transition from "One-Shot" generation to a collaborative, multi-turn design experience.
+
+### Phase 7: Conversation-Driven Story Refinement
+**Goal:** Implement a protocol for iterative requirement gathering before the Technical Solution Map is finalized.
+
+- [ ] Implement **Adaptive Questioning**: Logic to ask targeted follow-up questions based on the identified artifact type.
+- [ ] Implement **Context Stacking**: Ensure the analyzer remembers previously clarified details across multiple chat turns.
+- [ ] Implement **Requirement Freezing**: A protocol to "Lock" requirements once the user is satisfied.
+
+**Success Criteria:**
+- System identifies "Ambiguity Clusters" and asks no more than 3 high-impact questions per turn.
+- Solution Map accurately incorporates details gathered over 3+ chat turns.
+
+### Phase 8: Human-in-the-Loop Design Tuning
+**Goal:** Enable users to "Tweak" the Technical Solution Map before code generation.
+
+- [ ] Implement **Artifact Rejection/Swap**: Allow users to say "Use a Flow instead of a Business Rule" and have the map re-calculate.
+- [ ] Implement **Logic Refinement**: Allow users to adjust specific logic bullets within the proposed artifacts.
+
+**Success Criteria:**
+- User can successfully swap an artifact type and the "🔗 Dependency Map" updates accordingly.
+- Final code reflects the refined logic bullets exactly.
+
+### Phase 9: v2.0 Release & Final Hardening
+**Goal:** Final system audit and release preparation.
+
+- [ ] Conduct **Full-Suite Stress Test**: Run 10 complex, multi-turn stories from scratch.
+- [ ] Implement **Final Polish**: Update all prompts for maximum clarity and cross-module consistency.
+
+**Success Criteria:**
+- 100% pass rate on complex multi-turn stories.
+- SNow-Claude v2.0 documentation finalized.
+
+---
+
 ## Future Milestones
-- **v3 (Interactive Tuning)**: Conversation-driven story refinement.
+- **v4 (AI-to-AI Collaboration)**: Standardized handoff to other agentic systems.
 
 ---
 *Roadmap updated: 2026-05-10*
